@@ -76,7 +76,9 @@ flutter:
     - family: NeuePlak
       fonts:
         - asset: assets/fonts/NeuePlak-NarrowBold.ttf
+          weight: 700
         - asset: assets/fonts/NeuePlak-NarrowRegular.ttf
+          weight: 300
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

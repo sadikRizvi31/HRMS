@@ -58,7 +58,7 @@ TextStyle textBold(Color colors,double size){
     color: colors,
     fontSize: 25,
     fontFamily: "NeuePlak",
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w700,
   );
 }
 
@@ -68,8 +68,6 @@ TextStyle textLight(Color colors,double size){
     fontSize: size,
     height: 1.0,
     fontFamily: "NeuePlak",
-    fontWeight: FontWeight.normal,
-    fontStyle: FontStyle.normal,
-
+    fontWeight: FontWeight.w300,
   );
 }
