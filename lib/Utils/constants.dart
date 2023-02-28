@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-const COLOR_DARKGREY = Color.fromRGBO(90, 90, 90, 1.0);
+const Color_BLACK = Color.fromRGBO(0, 0, 0, 1.0);
 const COLOR_GREY = Color.fromRGBO(192,192,192, 1.0);
 
 const COLOR_WHITE = Colors.white;
@@ -11,52 +11,52 @@ const String  profileImage = "https://pbs.twimg.com/profile_images/1485050791488
 
 const TextTheme TEXT_THEME_DEFAULT = TextTheme(
   headline1: TextStyle(
-      color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 26),
+      color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 26),
   headline2: TextStyle(
-      color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 22),
+      color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 22),
   headline3: TextStyle(
-      color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 20),
+      color: Color_BLACK, fontWeight: FontWeight.w300, fontSize: 20),
   headline4: TextStyle(
-      color: COLOR_WHITE, fontWeight: FontWeight.w700, fontSize: 16),
+      color: Color_BLACK, fontWeight: FontWeight.w300, fontSize: 16),
   headline5: TextStyle(
-      color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 14),
+      color: Color_BLACK, fontWeight: FontWeight.w300, fontSize: 14),
   headline6: TextStyle(
-      color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 12),
+      color: Color_BLACK, fontWeight: FontWeight.w300, fontSize: 12),
   bodyText1: TextStyle(
-      color: COLOR_DARKGREY, fontSize: 14, fontWeight: FontWeight.w500,height: 1.5),
+      color: Color_BLACK, fontSize: 14, fontWeight: FontWeight.w300,height: 1.5),
   bodyText2: TextStyle(
-      fontSize: 14, fontWeight: FontWeight.w800,height: 1.5),
+      fontSize: 14, fontWeight: FontWeight.w300,height: 1.5),
   subtitle1:
-  TextStyle(color: COLOR_DARKGREY, fontSize: 12, fontWeight: FontWeight.w400),
+  TextStyle(color: Color_BLACK, fontSize: 12, fontWeight: FontWeight.w300),
   subtitle2: TextStyle(
-      color: COLOR_GREY, fontSize: 12, fontWeight: FontWeight.w400),);
+      color: COLOR_GREY, fontSize: 12, fontWeight: FontWeight.w300),);
 
 const TextTheme TEXT_THEME_SMALL = TextTheme(
     headline1: TextStyle(
-        color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 22),
+        color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 22),
     headline2: TextStyle(
-        color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 20),
+        color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 20),
     headline3: TextStyle(
-        color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 18),
+        color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 18),
     headline4: TextStyle(
-        color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 14),
+        color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 14),
     headline5: TextStyle(
-        color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 12),
+        color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 12),
     headline6: TextStyle(
-        color: COLOR_DARKGREY, fontWeight: FontWeight.w700, fontSize: 10),
+        color: Color_BLACK, fontWeight: FontWeight.w700, fontSize: 10),
     bodyText1: TextStyle(
-        color: COLOR_DARKGREY, fontSize: 12, fontWeight: FontWeight.w500,height: 1.5),
+        color: Color_BLACK, fontSize: 12, fontWeight: FontWeight.w500,height: 1.5),
     bodyText2: TextStyle(
         color:  COLOR_GREY, fontSize: 12, fontWeight: FontWeight.w500,height: 1.5),
     subtitle1:
-    TextStyle(color: COLOR_DARKGREY, fontSize: 10, fontWeight: FontWeight.w400),
+    TextStyle(color: Color_BLACK, fontSize: 10, fontWeight: FontWeight.w400),
     subtitle2: TextStyle(
         color: COLOR_GREY, fontSize: 10, fontWeight: FontWeight.w400));
 
 TextStyle textBold(Color colors,double size){
   return TextStyle(
     color: colors,
-    fontSize: 25,
+    fontSize: size,
     fontFamily: "NeuePlak",
     fontWeight: FontWeight.w700,
   );

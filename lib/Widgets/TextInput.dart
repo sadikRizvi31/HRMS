@@ -4,12 +4,12 @@ import '../../../Utils/constants.dart';
 
 class textInput extends StatefulWidget {
 
-  final IconData icon;
+  IconData? icon;
   final String hintText;
   final TextInputType keyboardType;
   bool obscureText;
 
-  textInput({required this.icon,required this.hintText,required this.keyboardType,this.obscureText = false});
+  textInput({this.icon,required this.hintText,required this.keyboardType,this.obscureText = false});
 
   @override
   State<textInput> createState() => _textInputState();
@@ -22,13 +22,13 @@ class _textInputState extends State<textInput> {
     final ThemeData themeData = Theme.of(context);
     return TextField(
       obscureText: widget.obscureText,
-      style: textLight(Colors.black,15),
+      style: textLight(Colors.black,14),
       keyboardType: widget.keyboardType,
       decoration: InputDecoration(
         labelText: widget.hintText,
-        prefixIcon: Container(
-          margin: EdgeInsets.only(right: 10,left: 1),
-          padding: EdgeInsets.all(12),
+        prefixIcon: widget.icon != null ? Container(
+          margin: EdgeInsets.only(right: 5,left: 1),
+          padding: EdgeInsets.only(left: 1.0),
           decoration: BoxDecoration(
             color: COLOR_BLUEMASK.withOpacity(0.5),
             borderRadius: BorderRadius.all(Radius.circular(5.0)),
@@ -38,7 +38,7 @@ class _textInputState extends State<textInput> {
             color: COLOR_BLUE,
             size: 29,
           ),
-        ),
+        ) : null,
         border: OutlineInputBorder(
           borderSide: BorderSide(
             color: COLOR_BLUEMASK,

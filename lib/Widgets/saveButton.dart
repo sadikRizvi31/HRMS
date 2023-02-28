@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hrms/Pages/HomePage/HomePage.dart';
 import 'package:hrms/Utils/constants.dart';
 
 class saveButton extends StatelessWidget {
@@ -18,8 +19,12 @@ class saveButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           primary: COLOR_BLUE,
         ),
-        onPressed: () {},
-        child: Text(text,style: themeData.textTheme.headline4,),
+        onPressed: () {
+          if(text == 'Login'){
+            Navigator.pushReplacement(context, new MaterialPageRoute(builder: (context) => HomePage()));
+          }
+        },
+        child: Text(text,style: textLight(COLOR_WHITE, 14),),
       ),
     );
   }
