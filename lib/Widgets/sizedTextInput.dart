@@ -7,14 +7,15 @@ class sizedTextInput extends StatelessWidget {
   final String hintText;
   final TextInputType keyboardType;
   bool obscureText;
+  String? Function(String?)? validator;
 
-  sizedTextInput({this.icon,required this.hintText,required this.keyboardType,this.obscureText = false});
+  sizedTextInput({this.icon,required this.hintText,required this.keyboardType,this.obscureText = false,this.validator});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 3.0,bottom: 3.0,left: 3.0,right: 3.0),
-      child: textInput(icon: icon,hintText: hintText,keyboardType: keyboardType,obscureText: obscureText,),
+      child: textInput(icon: icon,hintText: hintText,keyboardType: keyboardType,obscureText: obscureText,validator: this.validator,),
     );
   }
 }

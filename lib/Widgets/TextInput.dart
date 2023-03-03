@@ -8,8 +8,9 @@ class textInput extends StatefulWidget {
   final String hintText;
   final TextInputType keyboardType;
   bool obscureText;
+  String? Function(String?)? validator;
 
-  textInput({this.icon,required this.hintText,required this.keyboardType,this.obscureText = false});
+  textInput({this.icon,required this.hintText,required this.keyboardType,this.obscureText = false,this.validator});
 
   @override
   State<textInput> createState() => _textInputState();
@@ -20,7 +21,9 @@ class _textInputState extends State<textInput> {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-    return TextField(
+    return TextFormField(
+      autovalidateMode: AutovalidateMode.onUserInteraction,
+      validator: widget.validator,
       obscureText: widget.obscureText,
       style: textLight(Colors.black,14),
       keyboardType: widget.keyboardType,
